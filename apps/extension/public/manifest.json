@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "CodeWallah Exam Guard",
+  "version": "0.1.0",
+  "description": "Records browser activity signals during a supervised exam for human review.",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "alarms"],
+  "action": {
+    "default_title": "CodeWallah Exam Guard",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

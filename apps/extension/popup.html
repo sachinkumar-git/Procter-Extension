@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodeWallah Exam Guard</title>
+    <link rel="stylesheet" href="/src/popup.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="brand">CodeWallah</p>
+        <h1>Exam Guard</h1>
+      </div>
+      <span id="state-pill" class="pill" data-state="error">Checking</span>
+    </header>
+
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <form id="start-form" hidden>
+      <p class="instruction">
+        Open your exam in this tab, then start the session here.
+      </p>
+      <label>
+        Contest ID
+        <input id="contest-id" autocomplete="off" required maxlength="64" />
+      </label>
+      <label>
+        Candidate ID
+        <input id="candidate-id" autocomplete="off" required maxlength="64" />
+      </label>
+      <label>
+        Access code
+        <input
+          id="access-code"
+          type="password"
+          autocomplete="off"
+          required
+          maxlength="32"
+        />
+      </label>
+
+      <section class="notice">
+        <h2>Recorded during your session</h2>
+        <ul>
+          <li>Switching tabs and opening new tabs</li>
+          <li>Chrome losing focus</li>
+          <li>The browser window entering or leaving fullscreen</li>
+          <li>
+            If the Windows agent is paired: the name of the application in the
+            foreground
+          </li>
+        </ul>
+        <h2>Never recorded</h2>
+        <p>
+          Page contents, website addresses, keystrokes, clipboard, passwords,
+          your code, webcam, or microphone.
+        </p>
+        <p>
+          These are signals for an invigilator to review. An event does not
+          prove misconduct.
+        </p>
+      </section>
+
+      <label class="check">
+        <input id="acknowledge" type="checkbox" required />
+        I have read this notice.
+      </label>
+      <button type="submit">Start exam session</button>
+    </form>
+
+    <section id="session-view" hidden>
+      <p id="attention" class="attention" hidden>
+        The exam tab is no longer open or could not be tracked after a browser
+        restart. Tell your invigilator.
+      </p>
+      <dl>
+        <dt>Contest</dt>
+        <dd id="session-contest"></dd>
+        <dt>Candidate</dt>
+        <dd id="session-candidate"></dd>
+        <dt>Session</dt>
+        <dd id="session-id" class="mono"></dd>
+        <dt>Focus</dt>
+        <dd id="session-focus"></dd>
+        <dt>Browser fullscreen</dt>
+        <dd id="session-fullscreen"></dd>
+      </dl>
+      <button id="pair" type="button" class="secondary">
+        Show agent pairing code
+      </button>
+      <p id="pairing-code" class="pairing" hidden></p>
+      <button id="end" type="button" class="secondary">End session</button>
+      <button id="end-confirm" type="button" class="danger" hidden>
+        Confirm: end this session
+      </button>
+    </section>
+
+    <footer>
+      <p id="storage-line"></p>
+      <p id="upload-line" class="warning"></p>
+      <details>
+        <summary>Recent events</summary>
+        <ol id="recent"></ol>
+      </details>
+    </footer>
+
+    <script type="module" src="/src/popup.ts"></script>
+  </body>
+</html>
