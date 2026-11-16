@@ -1,0 +1,9 @@
+dist
+bin
+obj
+node_modules
+package-lock.json
+apps/windows-agent
+# The project specification is maintained by hand.
+README.md
+deploy
