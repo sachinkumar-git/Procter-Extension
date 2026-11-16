@@ -1,0 +1,20 @@
+Windows Registry Editor Version 5.00
+
+; Example for college IT review only. Do not apply without IT approval.
+; Test on one pilot machine first.
+;
+; Replace <EXTENSION_ID> and <UPDATE_URL>. Self-hosted update URLs only work on
+; Windows computers joined to Active Directory; see docs/lab-deployment.md.
+; The Chrome Web Store update URL is
+; https://clients2.google.com/service/update2/crx
+;
+; DeveloperToolsAvailability = 2 blocks DevTools for every user of the machine.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome]
+"DeveloperToolsAvailability"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallForcelist]
+"1"="<EXTENSION_ID>;<UPDATE_URL>"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\URLBlocklist]
+"1"="view-source:*"
