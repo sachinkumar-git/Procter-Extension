@@ -1,0 +1,6 @@
+{
+  "api_base_url": "http://localhost:3000",
+  "approved_browsers": ["chrome"],
+  "foreground_poll_ms": 250,
+  "heartbeat_seconds": 30
+}

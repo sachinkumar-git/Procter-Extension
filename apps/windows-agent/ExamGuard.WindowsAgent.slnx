@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/ExamGuard.Agent/ExamGuard.Agent.csproj" />
+  <Project Path="tests/ExamGuard.Agent.Tests/ExamGuard.Agent.Tests.csproj" />
+</Solution>
