@@ -1,0 +1,27 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+*.log
+
+# .NET
+bin/
+obj/
+publish/
+*.user
+.vs/
+*.exe
+*.dll
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+credential.bin
+
+# Candidate data must never enter the repository
+exports/
+*.csv
