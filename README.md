@@ -393,7 +393,6 @@ Start with **Phase 0 only**:
 5. Add a short `docs/architecture.md` and `docs/test-plan.md`.
 6. Run the available checks and report the results.
 
-Do not implement Phase 1 until Phase 0 is reviewed and approved.
 
 ---
 
