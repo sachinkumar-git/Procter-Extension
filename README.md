@@ -1,4 +1,4 @@
-# CodeWallah Exam Guard
+# Exam Guard
 
 > A lightweight, lab-focused exam integrity monitoring system for coding contests. It records reviewable activity signals; it does **not** guarantee that cheating is impossible.
 
