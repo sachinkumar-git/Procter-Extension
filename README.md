@@ -11,7 +11,7 @@
 
 ## 1. Goal
 
-Build a zero-software-licence-cost MVP that helps college invigilators review suspicious activity during a coding contest with approximately 400 participants.
+Build a zero software licence cost MVP that helps college invigilators review suspicious activity during a coding contest with approximately 400 participants.
 
 The first version will:
 
